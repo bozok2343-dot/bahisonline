@@ -103,88 +103,87 @@ header nav ul li a {
 }  
 /* Giriş Kutusu Ana Çerçevesi */
 .login-box {
-    background: rgba(15, 23, 42, 0.85); /* Modern koyu lacivert/siyah şeffaf arka plan */
-    backdrop-filter: blur(10px); /* Arkadaki görseli hafifçe bulandırır, yazılar netleşir */
-    padding: 40px;
-    border-radius: 16px;
-    width: 360px;
-    margin: 40px auto; /* Sayfada dikey ve yatay olarak ortalar */
+    background: rgba(0, 0, 0, 0.85); /* Tam siyah şeffaf arka plan */
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    margin: 40px auto;
     color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 1px solid rgba(0, 255, 204, 0.3); /* Siber neon yeşil ince çizgi */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 204, 0.1); /* Hafif parlama efekti */
+    font-family: 'Segoe UI', sans-serif;
+    border: 2px solid #ffcc00; /* Altın sarısı çerçeve çizgisi */
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.2); /* Sarı parlama efekti */
 }
 
-/* Başlık Stili */
+/* Başlık */
 .login-box h2 {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #00ffcc; /* Neon yeşil başlık */
+    margin-bottom: 25px;
+    color: #ffcc00;
+    font-size: 22px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Giriş Alanları Gruplaması */
+/* Giriş Alanları */
 .input-group {
     margin-bottom: 20px;
-    position: relative;
+    text-align: left;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 8px;
     font-size: 14px;
-    color: #94a3b8; /* Hafif gri etiket rengi */
+    color: #ffffff;
     font-weight: 500;
 }
 
-/* Yazı Giriş Kutuları */
 .input-group input {
     width: 100%;
-    padding: 12px 16px;
-    background: rgba(30, 41, 59, 0.7); /* Kutuların içi hafif şeffaf koyu gri */
-    border: 1px solid #334155;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 15px;
-    transition: all 0.3s ease;
+    padding: 12px;
+    background: #ffffff; /* Beyaz input alanları */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #000000;
+    font-size: 14px;
     box-sizing: border-box;
 }
 
-/* Kutulara tıklanınca (Focus durumu) */
 .input-group input:focus {
     outline: none;
-    border-color: #00ffcc;
-    box-shadow: 0 0 8px rgba(0, 255, 204, 0.3);
-    background: rgba(30, 41, 59, 0.9);
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+/* Hata Yazısı */
+.error-text {
+    color: #ff4a4a;
+    background: rgba(255, 74, 74, 0.1);
+    border-left: 3px solid #ff4a4a;
+    font-size: 13px;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    display: none; /* İlk başta gizli */
+    text-align: left;
 }
 
 /* Giriş Yap Butonu */
 .btn-login {
     width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #00ffcc 0%, #0099ff 100%); /* Neon yeşilden maviye geçişli buton */
+    padding: 12px;
+    background: #ffcc00; /* Tam sarı buton */
     border: none;
-    color: #0f172a; /* Koyu yazı rengi */
+    color: #000000;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background 0.2s ease;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
 }
 
-/* Butonun üzerine gelince parlama efekti */
 .btn-login:hover {
-    transform: translateY(-2px); /* Hafif yukarı kalkma efekti */
-    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.4);
-    opacity: 0.95;
-}
-
-.btn-login:active {
-    transform: translateY(0);
+    background: #e6b800; /* Üzerine gelince biraz daha koyu sarı */
 }
