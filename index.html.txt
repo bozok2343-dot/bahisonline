@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sitem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Web Sitem</div>
+        <nav>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Harika Web Sitemize Hoş Geldiniz</h1>
+            <p>HTML ve CSS ile sıfırdan oluşturulmuş temel web sayfası şablonu.</p>
+            <a href="#" class="btn">Daha Fazla Bilgi</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
