@@ -1,17 +1,25 @@
-// Butonu ve body elementini seçiyoruz
-const toggleButton = document.getElementById('theme-toggle');
-const bodyElement = document.documentElement;
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Sayfanın yenilenmesini engeller
 
-// Butona tıklandığında çalışacak fonksiyon
-toggleButton.addEventListener('click', () => {
-    // Mevcut temayı kontrol et
-    const currentTheme = bodyElement.getAttribute('data-theme');
-    
-    if (currentTheme === 'dark') {
-        bodyElement.removeAttribute('data-theme');
-        toggleButton.textContent = '🌙 Gece Modu';
+    // Kullanıcının yazdığı değerleri alıyoruz
+    const girilenKullanici = document.getElementById('username').value;
+    const girilenSifre = document.getElementById('password').value;
+    const hataKutusu = document.getElementById('error-message');
+
+    // Doğru olması gereken giriş bilgileri (Değiştirebilirsiniz)
+    const dogruKullanici = "admin";
+    const dogruSifre = "12345";
+
+    if (girilenKullanici === dogruKullanici && girilenSifre === dogruSifre) {
+        // Giriş başarılıysa kutuyu temizle ve yönlendir
+        hataKutusu.style.display = "none";
+        alert("Giriş Başarılı! Sisteme yönlendiriliyorsunuz.");
+        
+        // Buraya giriş yaptıktan sonra açılacak sayfanın linkini yazabilirsiniz:
+        // window.location.href = "anasayfa.html"; 
     } else {
-        bodyElement.setAttribute('data-theme', 'dark');
-        toggleButton.textContent = '☀️ Gündüz Modu';
+        // Giriş hatalıysa kırmızı uyarı kutusunu göster
+        hataKutusu.innerText = "Hatalı kullanıcı adı veya şifre girdiniz!";
+        hataKutusu.style.display = "block";
     }
 });
