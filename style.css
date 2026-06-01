@@ -187,3 +187,22 @@ header nav ul li a {
 .btn-login:hover {
     background: #e6b800; /* Üzerine gelince biraz daha koyu sarı */
 }
+/* Logo Alanı Düzenlemesi */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Logo ile giriş kutusu arasındaki boşluk */
+}
+
+.site-logo {
+    max-width: 250px; /* Logonun ekranda çok devasa görünmesini engeller */
+    height: auto;
+    display: inline-block;
+}
+
+/* Esnek Yerleşim Ekranı */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
