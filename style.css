@@ -27,19 +27,6 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-.error-text {
-    color: #ff4a4a; /* Canlı kırmızı hata rengi */
-    background: rgba(255, 74, 74, 0.1); /* Hafif kırmızı şeffaf arka plan */
-    border-left: 3px solid #ff4a4a;
-    font-size: 14px;
-    margin-bottom: 15px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    display: none; /* İlk başta gizli duracak */
-    text-align: left;
-    font-weight: 500;
-}
-
 
 header {
     display: flex;
@@ -73,18 +60,19 @@ header nav ul li a {
     color: white;
     border-radius: 4px;
 }
-/* Ana ekranın taşmaları göstermesini sağlayın */
+
+/* Ana Ekran Düzenlemeleri */
 .hero {
     min-height: 100vh;
-    height: auto; /* Sabit yüksekliği esnek hale getirin */
-    padding: 20px 0; /* Alttan ve üstten boşluk bırakın */
+    height: auto; /* Sabit yüksekliği esnek hale getirdik */
+    padding: 40px 0; /* Alttan ve üstten nefes alma boşluğu */
     display: flex;
     align-items: center;
     justify-content: center;
     background: #000000; /* Arka plan rengi */
 }
 
-/* İçeriği dikey olarak hizalayın */
+/* İçeriği dikey olarak hizalayan esnek yapı */
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -93,24 +81,27 @@ header nav ul li a {
     width: 100%;
 }
 
-/* Logonun boyutunu sınırlandırarak kutuyu yukarı çekin */
-.site-logo {
-    max-width: 220px; /* Logonun ekranda çok büyük kalmasını önler */
-    height: auto;
-    margin-bottom: 15px;
+/* Logo Alanı Düzenlemesi */
+.logo-container {
+    text-align: center;
+    margin-bottom: 10px; /* Logo ile giriş kutusu arasındaki ideal boşluk */
 }
 
-}  
+.site-logo {
+    max-width: 230px; /* Logonun ekranda çok devasa görünmesini engeller */
+    height: auto;
+    display: inline-block;
+}
+
 /* Giriş Kutusu Ana Çerçevesi */
 .login-box {
-    background: rgba(0, 0, 0, 0.85); /* Tam siyah şeffaf arka plan */
+    background: rgba(20, 20, 20, 0.85); /* Net bir siyah şeffaf arka plan */
     backdrop-filter: blur(8px);
     padding: 30px;
     border-radius: 12px;
     width: 350px;
-    margin: 40px auto;
+    margin: 20px auto;
     color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
     border: 2px solid #ffcc00; /* Altın sarısı çerçeve çizgisi */
     box-shadow: 0 0 20px rgba(255, 204, 0, 0.2); /* Sarı parlama efekti */
 }
@@ -142,7 +133,7 @@ header nav ul li a {
 .input-group input {
     width: 100%;
     padding: 12px;
-    background: #ffffff; /* Beyaz input alanları */
+    background: #ffffff; /* Beyaz girdi alanları */
     border: 1px solid #ccc;
     border-radius: 6px;
     color: #000000;
@@ -156,17 +147,18 @@ header nav ul li a {
     box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
 }
 
-/* Hata Yazısı */
+/* Kırmızı Hata Yazısı Alanı */
 .error-text {
     color: #ff4a4a;
     background: rgba(255, 74, 74, 0.1);
     border-left: 3px solid #ff4a4a;
     font-size: 13px;
     margin-bottom: 15px;
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
-    display: none; /* İlk başta gizli */
+    display: none; /* İlk başta gizli tutulur */
     text-align: left;
+    font-weight: 500;
 }
 
 /* Giriş Yap Butonu */
@@ -185,24 +177,5 @@ header nav ul li a {
 }
 
 .btn-login:hover {
-    background: #e6b800; /* Üzerine gelince biraz daha koyu sarı */
-}
-/* Logo Alanı Düzenlemesi */
-.logo-container {
-    text-align: center;
-    margin-bottom: 20px; /* Logo ile giriş kutusu arasındaki boşluk */
-}
-
-.site-logo {
-    max-width: 250px; /* Logonun ekranda çok devasa görünmesini engeller */
-    height: auto;
-    display: inline-block;
-}
-
-/* Esnek Yerleşim Ekranı */
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: #e6b800; /* Üzerine gelince koyu sarı */
 }
